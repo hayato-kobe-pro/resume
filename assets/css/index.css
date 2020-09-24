@@ -1,0 +1,64 @@
+.profile-photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.basic-wrapper {
+  display: flex;
+}
+
+.basic-info {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.articles {
+  padding-top: 150px;
+}
+
+.main-font-color {
+  color: #eeebe8;
+}
+
+.main-back-color {
+  background-color: #373841 !important;
+}
+
+.v-app-bar {
+  background-color: #373841 !important;
+}
+
+.v-main__wrap {
+  background-color: #e0d8cf !important;
+}
+
+.v-btn__content{
+  color:#e0d8cf !important;
+  font-size:100;
+}
+
+.v-btn.v-size--default {
+  font-size: 1rem !important;
+}
+
+.card-title{
+  width: 100%;
+  background-color: #373841;
+  color: #e0d8cf;
+}
+
+.card-value{
+  width: 100%;
+}
+
+.table-title{
+  padding:10px 20px;
+}
+
+.table-value{
+  padding:5px 10px;
+}
+
+.v-application p {
+   margin-bottom: 0px !important; 
+}
