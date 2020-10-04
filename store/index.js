@@ -20,7 +20,7 @@ export const actions = {
     // boardsの情報（データ）を取得する
     if(!state.data)
     {
-      const res = await this.$axios.$get(`https://prog-ac-job-seeker.s3-ap-northeast-1.amazonaws.com/dev-master.json`);
+      const res = await this.$axios.$get(`https://profilekobe-image.s3-ap-northeast-1.amazonaws.com/master.json`);
       commit('setData', res);
     }
   },

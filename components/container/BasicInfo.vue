@@ -2,16 +2,16 @@
 <div>
  <v-row >
  <v-col cols="12" sm="12" md="6" >
-   <img class="profile-photo" src="~/assets/images/hayato-min.jpg" alt />
+   <img class="profile-photo" :src=mainImg    style="max-width:450px; object-fit: cover;"     alt />
   </v-col>
    <v-col cols="12" sm="12" md="6">
      
       <v-card class="mt-2 main-back-color">
         <v-card-text>
-      <div class="main-font-color">Engineer</div>
-      <p  class="main-font-color text-h3" style="text-align:center; letter-spacing: 3px !important;"  >
+      <div class="main-font-color">エンジニア</div>
+      <div  class="main-font-color " style="text-align:center; letter-spacing: 3px !important; font-size:20px !important;">
         {{name}}
-      </p>
+      </div>  
     </v-card-text>
 
       </v-card>
@@ -39,7 +39,8 @@ export default {
    basicInfo: {
     type: Object,
   },
-  name:""
+  name:"",
+  mainImg:""
    },
  data: function () {
     return {
@@ -47,7 +48,7 @@ export default {
     };
   },
   async mounted() { 
-      console.log(this.basicInfo.birthday)
+    
 
     
 

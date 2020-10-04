@@ -3,9 +3,9 @@
    <v-card class="main-back-color"><p class="text-h6 main-font-color ml-3">PICKUP LIST</p></v-card>
     <v-row >
       <template>
-        <v-col  no-gutters v-for="(element, index) in profiles"  :key="index"  class="text-center" cols="12" sm="3">
+        <v-col  no-gutters v-for="(element, index) in profiles"  :key="index"  class="text-center" cols="12" sm="4">
           <v-card class="pa-3 ma-3" :elevation="6" style="min-height:400px; ">
-            <img src="~/assets/images/hayato-min.jpg"  width="100%" height="100%" />
+            <img :src=element.profileImg width="279px" height="200px" />
             <p class="text-h4 mt-3" style="letter-spacing: 3px !important; font-weight: 550; ">{{element.name}}</p>
             <p style="text-align: left !important; min-height:100px; min-height:150px; padding-top:10px;" >
               {{element.passion}}
@@ -22,7 +22,7 @@
 export default {
   data: function () {
     return {
-      profiles:[]
+      profiles:[],
     };
   },
   methods: {
@@ -33,6 +33,7 @@ export default {
   computed: {},
   async mounted() { 
 let array = []
+
 for(let i = 0; i < this.data.length; i++)
 {
   array[i] = this.data[i]
@@ -49,6 +50,8 @@ for(let i = 0; i < this.data.length; i++)
   else{
     array[i].passion  = array[i].introduction
   }
+array[i].profileImg = array[i].thumbnail.url.split('?')[0]
+  
 }
 this.profiles = array
   },

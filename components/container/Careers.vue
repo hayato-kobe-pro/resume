@@ -40,5 +40,8 @@
         desert:[]
       }
     },
+    mounted(){
+      console.log(this.careersInfo)
+    }
   }
 </script>

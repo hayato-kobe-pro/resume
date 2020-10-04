@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <basic-info :basicInfo="basicInfo" :name="name">
+    <basic-info :basicInfo="basicInfo" :name="name" :mainImg="mainImg">
       <BasicInfo class="basicInfo" />
     </basic-info>
     <careers :careersInfo="careersInfo">
@@ -24,6 +24,7 @@ export default {
   },
   data: function () {
     return {
+      mainImg:"",
       name: "",
       basicInfo: {},
       articlesInfo: [],
@@ -33,7 +34,9 @@ export default {
   methods: {},
   computed: {},
   async mounted() {
+   
     let result = this.$route.params.id.split(".id");
+ 
     let key = result[0];
     let profileInfo = {};
 
@@ -57,6 +60,9 @@ export default {
     }
  
     this.name = profileInfo.name;
+    this.mainImg = profileInfo.thumbnail.url.split('?')[0]
+  
+
     // delete profileInfo.articles;
     // delete profileInfo.careers;
     // delete profileInfo.header_image;
